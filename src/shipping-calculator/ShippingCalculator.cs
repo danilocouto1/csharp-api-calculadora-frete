@@ -73,6 +73,18 @@ public class ShippingCalculator
     // 4 - Calcular o Frete final para um array de preços e um array de pesos na função `CalculateShippingFromArray`
     public double calculateShippingFromArray(double[] itemPrices, double[] itemWeights)
     {
+        double priceFinalP = 0;
+        double priceFinalW = 0;
+        for (int i = 0; i < itemPrices.Length; i++)
+        {
+            priceFinalP += itemPrices[i];
+        }
+        for (int i = 0; i < itemWeights.Length; i++)
+        {
+            priceFinalW += itemWeights[i];
+        }
+        return calculateShipping(priceFinalP, priceFinalW);
+
         throw new NotImplementedException();
     }
 
