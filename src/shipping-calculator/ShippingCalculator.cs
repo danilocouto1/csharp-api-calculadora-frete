@@ -29,7 +29,7 @@ public class ShippingCalculator
         else if (orderPrice > 200)
         {
             return 0.00;
-        }
+        } else
         throw new NotImplementedException();
     }
 
@@ -55,7 +55,7 @@ public class ShippingCalculator
         else if ( weight > 10.0)
         {
             return 1.90 * weight;
-        }
+        } else
         throw new NotImplementedException();
     }
 
@@ -67,7 +67,6 @@ public class ShippingCalculator
             priceFinal *= 0.85;
         }
          return priceFinal;
-        throw new NotImplementedException();
     }
 
     // 4 - Calcular o Frete final para um array de preços e um array de pesos na função `CalculateShippingFromArray`
@@ -84,8 +83,6 @@ public class ShippingCalculator
             priceFinalW += itemWeights[i];
         }
         return calculateShipping(priceFinalP, priceFinalW);
-
-        throw new NotImplementedException();
     }
 
 }
