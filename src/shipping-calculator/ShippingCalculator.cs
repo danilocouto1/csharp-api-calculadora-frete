@@ -36,6 +36,26 @@ public class ShippingCalculator
     // 2 - Calcular o Frete por peso na função `CalculateShippingWeight`
     public double calculateShippingWeight(double weight)
     {
+        if (weight <= 1.5)
+        {
+            return 3.80;
+        }
+        else if (weight <= 3.5 && weight > 1.5)
+        {
+            return 5.70;
+        }
+        else if (weight <= 7.0 && weight > 3.5)
+        {
+            return 7.2;
+        }
+        else if (weight <= 10.0 && weight > 7.0)
+        {
+            return 9.40;
+        }
+        else if ( weight > 10.0)
+        {
+            return 1.90 * weight;
+        }
         throw new NotImplementedException();
     }
 
