@@ -61,6 +61,12 @@ public class ShippingCalculator
 
     // 3 - Calcular o Frete final na função `CalculateShipping`
     public double calculateShipping(double orderPrice, double weight) {
+        double priceFinal = calculateShippingPrice(orderPrice) + calculateShippingWeight(weight);
+        if (priceFinal > 45.0)
+        {
+            priceFinal *= 0.85;
+        }
+         return priceFinal;
         throw new NotImplementedException();
     }
 
